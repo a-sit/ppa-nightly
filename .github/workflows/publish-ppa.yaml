@@ -13,18 +13,22 @@ jobs:
     steps:
       - name: Git Checkout
         uses: actions/checkout@v3
-      - name: Setup git config
+
+      - name: Setup GIT config
         run: |
           git config user.name "A-SIT Bot"
           git config user.email "software@egiz.gv.at"
+
       - name: Import GPG Signing key
         run: |
           echo -e "$GPG_SIGNING_KEY" | base64 --decode | gpg --import
         env:
           GPG_SIGNING_KEY: ${{ secrets.ASIT_PPA_NIGHTLY_GPG_SIGNING_KEY }}
-      - name: Publish PPA
+
+      - name: Update, Re-Sign, and Publish PPA
         run: |
           bash update.sh
           git push
+          
       - name: Cleanup GPG
         run: rm -rf ~/.gnupg
