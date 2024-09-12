@@ -10,14 +10,14 @@ SIGNINGKEYID="E1F8330A475CD21A"
 
 # gpg --armor --export $SIGNINGKEYID > KEY.gpg
 
-echo "Looking for new deb packages ..."
-NEWDEB=`git status | grep .deb || true`
+#echo "Looking for new deb packages ..."
+#NEWDEB=`git status | grep .deb || true`
 
-if [[ -z "${NEWDEB// }" ]]; then
-    echo "No new deb packages. Done!"
-    exit 0
-fi
-NEWDEB=`echo $NEWDEB | xargs`
+#if [[ -z "${NEWDEB// }" ]]; then
+#    echo "No new deb packages. Done!"
+#    exit 0
+#fi
+#NEWDEB=`echo $NEWDEB | xargs`
 
 
 dpkg-scanpackages --multiversion . > Packages
@@ -32,5 +32,5 @@ echo "deb https://a-sit/.github.io/ppa-nightly ./" > file.list
 
 
 git add Packages Packages.gz Release Release.gpg InRelease file.list
-git add $NEWDEB
-git commit -m "Update PPA content" -m "add $NEWDEB"
+#git add $NEWDEB
+git commit -m "Update PPA" #-m "add $NEWDEB"
