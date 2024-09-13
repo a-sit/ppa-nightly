@@ -12,7 +12,7 @@ Packages in this PPA are directly pushed from the nightly continuous integration
 
 First, add the public key of the PPA and the PPA URL to the package manager, and update the package manager
 
-    curl -s "https://a-sit.github.io/ppa-nightly/KEY.gpg" | sudo apt-key add -
+    curl -fsSL https://a-sit.github.io/ppa-nightly/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/a-sit-nighty-ppa-keyring.gpg
     sudo curl -s -o /etc/apt/sources.list.d/asit-nightly.list "https://a-sit.github.io/ppa-nightly/file.list"
     sudo apt update 
 
