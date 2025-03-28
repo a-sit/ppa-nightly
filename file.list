@@ -1,1 +1,1 @@
-deb https://a-sit/.github.io/ppa-nightly ./
+deb [signed-by=/usr/share/keyrings/a-sit-nighty-ppa-keyring.gpg] https://a-sit.github.io/ppa-nightly ./
