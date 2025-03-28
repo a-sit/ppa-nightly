@@ -33,7 +33,7 @@ echo "Sign Release file with inline signature ..."
 gpg --default-key $SIGNINGKEYID --clearsign -o - Release > InRelease
 
 echo "Update PPA .list file ..."
-echo "deb https://a-sit/.github.io/ppa-nightly ./" > file.list
+echo "deb [signed-by=/usr/share/keyrings/a-sit-nighty-ppa-keyring.gpg] https://a-sit/.github.io/ppa-nightly ./" > file.list
 
 
 echo "Commit changes back to PPA repo ..."
