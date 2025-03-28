@@ -16,7 +16,7 @@ jobs:
 
       - name: Setup GIT config
         run: |
-          git config user.name "A-SIT Bot"
+          git config user.name "A-SIT PPA Bot"
           git config user.email "software@egiz.gv.at"
 
       - name: Import GPG Signing key
