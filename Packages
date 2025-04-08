@@ -214,3 +214,21 @@ Description: PDF-Over is your tool for frequent & efficient PDF signing.
 License: EUPL-1.2
 Vendor: A-SIT <software@egiz.gv.at>
 
+Package: pdf-over-nightly
+Version: 20250408.091054
+Architecture: all
+Maintainer: A-SIT <software@egiz.gv.at>
+Installed-Size: 38321
+Depends: bash, default-jre | java-runtime (>= 21)
+Filename: ./pdf-over-nightly-20250408.091054-all.deb
+Size: 35640410
+MD5sum: a6aeb3381cead0f1177cdad609dfe3dc
+SHA1: e11ed526d96c07193065dbc881f744ebc30ae1b6
+SHA256: 4ecef8e50ec45792d7c4132dea264567fc19b97f9dab778716a89a54b1e6c32c
+Section: default
+Priority: optional
+Homepage: https://technology.a-sit.at/en/pdf-over/
+Description: PDF-Over is your tool for frequent & efficient PDF signing.
+License: EUPL-1.2
+Vendor: A-SIT <software@egiz.gv.at>
+
